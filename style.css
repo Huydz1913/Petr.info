@@ -1,0 +1,137 @@
+/* Nền mix màu hồng, xanh, đỏ */
+body {
+  background: linear-gradient(45deg, pink, blue, red);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Ảnh đại diện khung tròn */
+.avatar {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  border: 5px solid #fff;
+  margin-top: 50px;
+}
+
+/* Tên Petr nhấp nháy 7 sắc cầu vồng */
+.rainbow-text {
+  background-image: linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red);
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: rainbow 3s infinite;
+}
+
+@keyframes rainbow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* Biểu tượng Facebook */
+.fab {
+  font-size: 2rem;
+  color: #3b5998;
+}
+
+/* Tiểu sử Doktor Hair */
+.bio {
+  font-size: 1.5rem;
+  color: white;
+  margin-top: 10px;
+}
+
+/* Nhạc và hiệu ứng nền nhấp nháy khi phát nhạc */
+audio {
+  width: 100%;
+  background: linear-gradient(45deg, red, blue, pink);
+  animation: blinkBackground 2s infinite;
+}
+
+@keyframes blinkBackground {
+  0% { background: linear-gradient(45deg, red, blue, pink); }
+  50% { background: linear-gradient(45deg, yellow, green, orange); }
+  100% { background: linear-gradient(45deg, red, blue, pink); }
+}
+
+/* Liên kết mạng xã hội với khung nhấp nháy */
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  margin: 0 15px;
+  font-size: 2rem;
+  color: white;
+  display: inline-block;
+  padding: 10px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.social-links a:hover {
+  border-color: #fff;
+  background: linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red);
+  color: black;
+}
+
+/* Thông tin liên hệ nhấp nháy */
+.contact-info {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  animation: blinkText 1s infinite;
+}
+
+@keyframes blinkText {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Hiệu ứng tuyết rơi */
+.snowflakes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  animation: snowfall 5s linear infinite;
+}
+
+@keyframes snowfall {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.snowflake {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  opacity: 0.8;
+  border-radius: 50%;
+  animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+  0% { transform: translateY(-10px); }
+  100% { transform: translateY(100vh); }
+}
